@@ -1,6 +1,8 @@
-# /root
+# root
 
 최상위 도메인 서버
+
+프레임워크: hono
 
 ## Route
 
