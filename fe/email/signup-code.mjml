@@ -1,0 +1,30 @@
+<mjml>
+  <mj-body>
+    <mj-section background-color="#FFFFFF">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="bold" color="#000000" font-family="Helvetica Neue" align="center">
+          ALLEYS
+        </mj-text align="center">
+        <mj-text font-size="28px" font-weight="bold" color="#91F5AD" align="center">
+          이메일을 인증해주세요.
+        </mj-text>
+        <mj-text font-size="16px">
+          앨리스 회원가입을 원하시면 아래 코드를 이메일 인증 화면에 입력해주세요.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#91F5AD">
+      <mj-column>
+        <mj-text font-size="40px" align="center">
+          {{code}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#FFFFFF">
+      <mj-column>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

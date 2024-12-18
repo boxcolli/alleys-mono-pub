@@ -1,0 +1,40 @@
+<mjml>
+  <mj-body>
+    <mj-section background-color="#FFFFFF">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="bold" color="#000000" font-family="Helvetica Neue" align="center">
+          ALLEYS
+        </mj-text align="center">
+        <mj-text font-size="28px" font-weight="bold" color="#91F5AD" align="center">
+          이미 등록된 이메일입니다.
+        </mj-text>
+        <mj-text font-size="16px">
+          누군가가 이 이메일로 alleys.app 회원가입을 시도했습니다.
+          이메일의 소유자라면 회원가입 대신 로그인 및 비밀번호 찾기를 해주세요.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#91F5AD">
+      <mj-column>
+        <mj-button>
+          <a href="https://alleys.app">
+            로그인하기
+          </a>
+        </mj-button>
+      </mj-column>
+      <mj-column>
+        <mj-button>
+          <a href="https://alleys.app">
+            비밀번호 찾기
+          </a>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#FFFFFF">
+      <mj-column>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

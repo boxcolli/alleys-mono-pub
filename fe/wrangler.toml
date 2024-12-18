@@ -1,0 +1,104 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "alleys-fe"
+compatibility_date = "2024-10-04"
+compatibility_flags = [ "nodejs_compat" ]
+pages_build_output_dir = "./build/client"
+
+# Automatically place your workloads in an optimal location to minimize latency.
+# If you are running back-end logic in a Pages Function, running it closer to your back-end infrastructure
+# rather than the end user may result in better performance.
+# Docs: https://developers.cloudflare.com/pages/functions/smart-placement/#smart-placement
+# [placement]
+# mode = "smart"
+
+# Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
+# Docs:
+# - https://developers.cloudflare.com/pages/functions/bindings/#environment-variables
+# Note: Use secrets to store sensitive data.
+# - https://developers.cloudflare.com/pages/functions/bindings/#secrets
+[vars]
+WHICH_ENV = "development"
+
+# Backend
+BACKEND_URL = "https://alleys-be.dmg04158.workers.dev"
+
+# Email
+EMAIL_FROM_ADDR = "DoNotReply@alleys.app"
+EMAIL_CODE_LEN = 6
+
+# Turnstile
+#   https://developers.cloudflare.com/turnstile/troubleshooting/testing/
+TURNSTILE_SITE_KEY = "1x00000000000000000000AA" 
+TURNSTILE_ENDPOINT = "https://challenges.cloudflare.com/turnstile/v0/siteverify"
+
+[[kv_namespaces]]
+# alleys-fe-main-pro
+binding = "KV_SESSION_MAIN"
+id = "94d93afc72674a9084e63f45c89ba301"
+preview_id = "f69f1b1075844e19991747f488fe8fac"
+
+[[kv_namespaces]]
+# alleys-fe-auth-pro
+binding = "KV_SESSION_AUTH"
+id = "b4bb6c704a224589b42f4c5d7c85e554"
+preview_id = "f69f1b1075844e19991747f488fe8fac"
+
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "a0906bff482b4af1823242ac555311fe"
+
+# To use different bindings for preview and production environments, follow the examples below.
+# When using environment-specific overrides for bindings, ALL bindings must be specified on a per-environment basis.
+# Docs: https://developers.cloudflare.com/pages/functions/wrangler-configuration#environment-specific-overrides
+
+######## PREVIEW environment config ########
+
+[env.preview.vars]
+WHICH_ENV = "preview"
+BACKEND_URL = "https://alleys-be.dmg04158.workers.dev"
+EMAIL_FROM_ADDR = "DoNotReply@alleys.app"
+EMAIL_CODE_LEN = 6
+TURNSTILE_SITE_KEY = "3x00000000000000000000FF" 
+TURNSTILE_ENDPOINT = "https://challenges.cloudflare.com/turnstile/v0/siteverify"
+
+[[env.preview.kv_namespaces]]
+# alleys-fe-main-pro
+binding = "KV_SESSION_MAIN"
+id = "94d93afc72674a9084e63f45c89ba301"
+preview_id = "f69f1b1075844e19991747f488fe8fac"
+
+[[env.preview.kv_namespaces]]
+# alleys-fe-auth-pro
+binding = "KV_SESSION_AUTH"
+id = "b4bb6c704a224589b42f4c5d7c85e554"
+preview_id = "f69f1b1075844e19991747f488fe8fac"
+
+[[env.preview.hyperdrive]]
+binding = "HYPERDRIVE"
+id = "a0906bff482b4af1823242ac555311fe"
+
+######## PRODUCTION environment config ########
+
+[env.production.vars]
+WHICH_ENV = "production"
+BACKEND_URL = "https://api.alleys.app"
+EMAIL_FROM_ADDR = "DoNotReply@alleys.app"
+EMAIL_CODE_LEN = 6
+TURNSTILE_SITE_KEY = "0x4AAAAAAAee0EOjd_chdF7j"
+TURNSTILE_ENDPOINT = "https://challenges.cloudflare.com/turnstile/v0/siteverify"
+
+[[env.production.kv_namespaces]]
+# alleys-fe-main-pro
+binding = "KV_SESSION_MAIN"
+id = "94d93afc72674a9084e63f45c89ba301"
+preview_id = "f69f1b1075844e19991747f488fe8fac"
+
+[[env.production.kv_namespaces]]
+# alleys-fe-auth-pro
+binding = "KV_SESSION_AUTH"
+id = "b4bb6c704a224589b42f4c5d7c85e554"
+preview_id = "f69f1b1075844e19991747f488fe8fac"
+
+[[env.production.hyperdrive]]
+binding = "HYPERDRIVE"
+id = "a0906bff482b4af1823242ac555311fe"

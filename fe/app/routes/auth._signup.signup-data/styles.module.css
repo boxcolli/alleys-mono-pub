@@ -1,0 +1,32 @@
+fieldset {
+  --bg-muted: rgb(230, 230, 230);
+  --font-color-muted: rgb(165, 165, 165);
+}
+
+.with-hint {
+  margin: 0 0 .8rem 0;
+  padding: var(--size-2);
+  
+  input {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-monospace-code);
+
+    &::before {
+      margin-left: var(--spacing-sm);
+      content: "× "
+    }
+
+    &.ok {
+      color: var(--font-color-muted);
+
+      &::before {
+        content: "✓ "
+      }
+    }
+  }
+}

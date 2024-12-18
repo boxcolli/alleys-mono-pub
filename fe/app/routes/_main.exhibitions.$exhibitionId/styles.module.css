@@ -1,0 +1,62 @@
+.layout {
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  section {
+    padding: var(--size-2);
+  }
+}
+
+.section-info {
+  display: flex;
+  flex-direction: column;
+
+  table > img {
+    /* aspect-ratio: var(--ratio-portrait); */
+  }
+
+  td {
+    padding: var(--size-2);
+    font-size: var(--font-size-1);
+  }
+
+  button {
+    block-size: auto;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-info {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (width <= 650px) {
+  .section-info {
+    display: flex;
+
+    img {
+      padding-left: var(--size-10);
+      padding-right: var(--size-10);
+    }
+  }
+}
+
+.section-intro {
+}
+
+.section-review {
+}
+
+.review-edit {
+  .textarea-div {
+    height: auto;
+    
+  }
+}

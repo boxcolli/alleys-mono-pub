@@ -1,0 +1,10 @@
+node_modules
+
+app/routes/prac*
+
+/.cache
+/build
+.env
+.dev.vars
+
+.wrangler

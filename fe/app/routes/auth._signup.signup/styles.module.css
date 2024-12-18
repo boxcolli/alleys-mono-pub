@@ -1,0 +1,74 @@
+/* https://moderncss.dev/pure-css-custom-checkbox-style/ */
+
+div.container-agree {
+  display: flex;
+  /* gap: .5rem; */
+  align-items: center;
+  margin: 0 0 .8rem 0;
+
+  a,
+  label,
+  input {
+    margin: 0;
+  }
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  padding: .2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: .8rem;
+  height: .8rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  /* box-shadow: inset 1em 1em var(--color-primary); */
+  box-shadow: inset 1rem 1rem green;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+button.btn-ghost {
+  border: none;
+}
+
+.turnstile {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 .8rem 0;
+}
+
+a.footnote {
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: .1rem;
+  }
+}
+
+.form-layout {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+  
+}

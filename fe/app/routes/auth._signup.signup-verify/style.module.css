@@ -1,0 +1,39 @@
+progress {
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.fade-out-element {
+  animation: fadeout 3s;
+  -moz-animation: fadeout 3s; /* Firefox */
+  -webkit-animation: fadeout 3s; /* Safari and Chrome */
+  -o-animation: fadeout 3s; /* Opera */
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* Firefox */
+@-moz-keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* Safari and Chrome */
+@-webkit-keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* Opera */
+@-o-keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.form-layout {
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+}

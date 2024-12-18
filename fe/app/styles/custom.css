@@ -1,0 +1,26 @@
+/* html {
+  font-size: var(--size-3);
+}
+
+@media (width <= 1024px) {
+  html { font-size: .8rem; }
+}
+
+@media (width <= 768px) {
+	html { font-size: .6rem; }
+}
+
+@media (width <= 480px) {
+  html { font-size: .5rem; }
+} */
+
+body {
+  font-family: var(--font-system-ui);
+}
+
+.logo {
+  margin: 0;
+  font-family: "susa",Inter,Roboto,Helvetica Neue,Arial Nova,Nimbus Sans,Arial,sans-serif;
+  letter-spacing: var(--font-letterspacing-1);
+  font-weight: var(--font-weight-8);
+}

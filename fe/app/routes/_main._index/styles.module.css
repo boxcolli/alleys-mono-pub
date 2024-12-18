@@ -1,0 +1,92 @@
+.land-section {
+  margin-top: 0;
+  margin-bottom: var(--size-10);
+
+  h1 { font-size: var(--font-size-8); }
+  h2 { font-size: var(--font-size-6); }
+  h3 { font-size: var(--font-size-5); }
+  h4 { font-size: var(--font-size-4); }
+  h5 { font-size: var(--font-size-3); }
+  h6 { font-size: var(--font-size-2); }
+  button {
+    margin: 0;
+    min-inline-size: 0;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .land-section {
+    h1 { font-size: var(--font-size-7); }
+    h2 { font-size: var(--font-size-5); }
+    h3 { font-size: var(--font-size-4); }
+    h4 { font-size: var(--font-size-3); }
+    h5 { font-size: var(--font-size-2); }
+    h6 { font-size: var(--font-size-1); }
+  }
+}
+
+@media screen and (width <= 768px) {
+  .land-section {
+    article { padding: var(--size-2); }
+    h1 { font-size: var(--font-size-6); }
+    h2 { font-size: var(--font-size-4); }
+    h3 { font-size: var(--font-size-3); }
+    h4 { font-size: var(--font-size-2); }
+    h5 { font-size: var(--font-size-1); }
+    h6 { font-size: var(--font-size-0); }
+
+    button {
+      padding-left: var(--size-3);
+      padding-right: var(--size-3);
+    }
+  }
+}
+
+@media screen and (width <= 480px) {
+  .land-section {
+    h1 { font-size: var(--font-size-5); }
+    h2 { font-size: var(--font-size-3); }
+    h3 { font-size: var(--font-size-2); }
+    h4 { font-size: var(--font-size-1); }
+    h5 { font-size: var(--font-size-0); }
+    h6 { font-size: var(--font-size-00); }
+    i { font-size: var(--font-size-1); }
+    nav { gap: var(--size-2); }
+    button {
+      /* block-size: auto; */
+      /* min-inline-size: var(--size-4); */
+    }
+  }
+}
+
+/* Hero */
+.land-0 {
+  img {
+    height: var(--size-15);
+    filter: brightness(1.07);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+}
+
+/* Discover */
+.land-1 {
+  
+}
+.land-1-item {
+  a:hover {
+    background-color: var(--surface-container-highest);
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+  }
+}
+
+.land-2 {
+
+}

@@ -1,0 +1,5 @@
+@import url("beercss/dist/cdn/beer.min.css");
+
+html {
+  font-size: 1.15rem;
+}

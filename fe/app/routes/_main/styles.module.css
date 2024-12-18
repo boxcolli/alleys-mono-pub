@@ -1,0 +1,28 @@
+.main-container {
+  max-width: 1440px;
+}
+
+.app-bar {
+}
+
+.nav-menu {
+  button {
+    min-inline-size: 0;
+  }
+}
+
+@media screen and (width <= 480px) {
+  .app-bar {
+    /* padding: var(--size-1); */
+    nav { gap: 0; }
+    button { margin: 0; }
+  }
+
+  .nav-menu {
+    
+  }
+}
+
+.avatar-in-drawer {
+  width: var(--size-8);
+}

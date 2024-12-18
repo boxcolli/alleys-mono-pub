@@ -1,0 +1,11 @@
+.code-input {
+  display: flex;
+  flex-direction: row;
+  gap: .2rem;
+
+  input.code-input-entry {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+  }
+}

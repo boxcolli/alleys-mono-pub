@@ -1,0 +1,62 @@
+name: Deploy FE
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "fe/**"
+      - ".github/workflows/deploy-fe.yml"
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "fe/**"
+      - ".github/workflows/deploy-fe.yml"
+
+  repository_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Check STOP_DEPLOY
+        run: |
+          if [ "${{ vars.STOP_DEPLOY }}" == "true" ]; then
+            echo "Stopping job"
+            exit 0
+          fi
+          echo "Continuing..."
+          
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install
+        working-directory: ./fe
+        run: bun install
+
+      # - name: Prisma
+      #   run: bun run gen
+      
+      - name: Build
+        run: |
+          export WRANGLER_HYPERDRIVE_LOCAL_CONNECTION_STRING_HYPERDRIVE="${{ secrets.DATABASE_URL }}"
+          bun run build
+        working-directory: ./fe
+      
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          workingDirectory: ./fe
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          preCommands: wrangler pages project create ${{ vars.ORG_NAME }}-fe --production-branch=main || true
+          command: pages deploy ./build/client --project-name=${{ vars.ORG_NAME }}-fe --branch=main --commit-dirty=true
+          packageManager: bun

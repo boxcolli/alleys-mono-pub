@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "susa";
+  src: url("/fonts/Susa60-Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "susa";
+  src: url("/fonts/Susa60-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "susa";
+  src: url("/fonts/Susa60-Medium.otf");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "susa";
+  src: url("/fonts/Susa60-UltraLight.otf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "susa";
+  src: url("/fonts/Susa60-VariableVF.ttf");
+  font-weight: normal;
+  font-style: italic;
+}

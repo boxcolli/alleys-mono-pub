@@ -1,0 +1,71 @@
+div.alert-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+div.alert {
+  --color-fill: #333333;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  height: 3rem;
+  width: fit-content;
+  border: 1px solid var(--color-fill);
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-fill);
+  }
+}
+
+.alert-icon {
+  --color-success: #80FF72;
+  --color-info: #7EE8FA;
+  --color-warning: #FFF07C;
+  --color-error: #E58C8A;
+  --color-promote: #9B7EDE;
+}
+
+.alert-success { color: var(--color-success); }
+.alert-info    { color: var(--color-info); }
+.alert-warning { color: var(--color-warning); }
+.alert-error    { color: var(--color-error); }
+.alert-promote  { color: var(--color-promote); }
+
+.fade-out-element {
+  animation: fadeout 3s;
+  -moz-animation: fadeout 3s; /* Firefox */
+  -webkit-animation: fadeout 3s; /* Safari and Chrome */
+  -o-animation: fadeout 3s; /* Opera */
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* Firefox */
+@-moz-keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* Safari and Chrome */
+@-webkit-keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* Opera */
+@-o-keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
