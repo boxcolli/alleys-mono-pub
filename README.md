@@ -7,7 +7,7 @@ This repo is under CC-BY-NC-ND 4.0. (NonCommercial-NoDerivatives)
 
 | 폴더      | 내용 | 포함 |
 |----------|-----|-----|
-| /@alleys | 공통 라이브러리 |
+| /@alleys | 공통 라이브러리 | (일부)
 | /dash    | 대시보드 | ✔️
 | /fe      | 프론트엔드 | ✔️
 | /otp     | 로컬 otp 툴 | ✔️
